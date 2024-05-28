@@ -24,7 +24,7 @@ export default function Register(){
             Cart:[]
         }
 
-        const response = await fetch(`http://localhost:3000/store`,{
+        const response = await fetch(import.meta.env.VITE_PUBLIC_APIURL,{
             method:"POST",
             body: JSON.stringify(newUser),
             headers:{

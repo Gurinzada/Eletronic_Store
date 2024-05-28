@@ -17,6 +17,15 @@
       "email": "augustoinacio243@gmail.com",
       "password": "123456",
       "Cart": []
+    },
+    {
+      "id": "d5c7",
+      "FirstName": "Fodasse",
+      "SecondName": "kkkkk",
+      "Age": 22,
+      "email": "teste2@email.com",
+      "password": "123456",
+      "Cart": []
     }
   ]
 }

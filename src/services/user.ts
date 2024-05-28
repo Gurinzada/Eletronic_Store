@@ -14,13 +14,13 @@ export type Products = {
 }
 
 export async function getDataById(id:string|undefined){
-    const response = await fetch(`http://localhost:3000/store/${id}`)
+    const response = await fetch(`${import.meta.env.VITE_PUBLIC_APIURL}/${id}`)
     const data:User = await response.json()
     return data
 }
 
 export async function getAllDatas() {
-    const response = await fetch(`http://localhost:3000/store`)
+    const response = await fetch(import.meta.env.VITE_PUBLIC_APIURL)
     const data:User = await response.json()
     return data
 }
