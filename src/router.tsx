@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Start from "./Pages/Start";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import Commercial from "./Pages/Commercial";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -15,7 +17,8 @@ const Router = createBrowserRouter([
         path: "/login",
         element:<Login/>
     },{
-        path:"/commercial/:UserID"
+        path:"/commercial/:UserID",
+        element:<PrivateRoute><Commercial/></PrivateRoute>
     }
 ])
 
