@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { User, getDataById } from "../services/user"
 import { useEffect, useState } from "react"
 import { useAuth } from "../context/AuthProvider"
+import ProductCard from "../components/ProductCards"
 
 export default function Commercial(){
     const {UserID} = useParams()
@@ -30,6 +31,12 @@ export default function Commercial(){
                     <span onClick={handleLogout}>Logout</span>
                 </nav>
             </header>
+
+            <main>
+                <section>
+                    <ProductCard/>
+                </section>
+            </main>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Commercial from "./Pages/Commercial";
 import PrivateRoute from "./components/PrivateRoute";
+import Cart from "./Pages/Cart";
 
 
 const Router = createBrowserRouter([
@@ -19,6 +20,9 @@ const Router = createBrowserRouter([
     },{
         path:"/commercial/:UserID",
         element:<PrivateRoute><Commercial/></PrivateRoute>
+    },{
+        path:"/commercial/cart/:UserID",
+        element:<Cart/>
     }
 ])
 
