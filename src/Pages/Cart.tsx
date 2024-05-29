@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { User, getDataById } from "../services/user"
+import { Bounce, ToastContainer, toast } from "react-toastify"
+import 'react-toastify/ReactToastify.css';
 
 export default function Cart(){
     const {UserID} = useParams()
@@ -19,12 +21,26 @@ export default function Cart(){
         const total = infosUser?.Cart.reduce((actual, current) => actual + current.price, 0 )
          setTheTotal(String(total?.toFixed(2)))
     }
+
+    useEffect(() => {
+        theTotal()
+    },[infosUser])
     
     const removeProduct = async(indexProduct:number) => {
             if(infosUser){
                 const updatedCart = infosUser.Cart.filter((_product,index) => index !== indexProduct)
                 const updatedInfos = {...infosUser, Cart:updatedCart}
-
+                toast.success(`Produto removido com sucesso!`, {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Bounce,
+                    });
             await fetch(`${import.meta.env.VITE_PUBLIC_APIURL}/${UserID}`,{
                 method:"PUT",
                 body: JSON.stringify(updatedInfos),
@@ -71,10 +87,11 @@ export default function Cart(){
                         <tfoot>
                             <tr>
                                 <th scope="row">Valor Total</th>
-                                <td>R$ {TheTotal}</td>
+                                <td>R$ {TheTotal === undefined ? 0 : TheTotal}</td>
                             </tr>
                         </tfoot>
                     </table>
+                    <ToastContainer/>
                 </section>
             </main>
         </div>

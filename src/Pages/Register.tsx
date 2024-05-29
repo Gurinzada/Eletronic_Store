@@ -9,7 +9,7 @@ export default function Register(){
     const [age, setAge] = useState(1)
     const [email, setEmail] = useState(``)
     const [password, setPassword] = useState(``)
-    const [cartArrayEmpty, setArrayCart] = useState<Products[]>([])
+    const [cartArrayEmpty, /*setArrayCart*/] = useState<Products[]>([])
     const navigate = useNavigate()
     const {login} = useAuth()
 

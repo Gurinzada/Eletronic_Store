@@ -7,7 +7,14 @@
       "Age": 150,
       "email": "admin@admin.com",
       "password": "adminadmin",
-      "Cart": []
+      "Cart": [
+        {
+          "id": 1,
+          "name": "Fone de Ouvido JBL",
+          "price": 199.99,
+          "url": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/149812/Fone-De-Ouvido-JBL-Tune-500-Supra-Auricular-On-Ear-Preto_1716169904_m.jpg"
+        }
+      ]
     }
   ]
 }
