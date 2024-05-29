@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom"
 import DefaultFooter from "../components/DefaultFooter"
+import foneGamer from '../imgs/FoneGamerStartPage.webp'
+import xboxControl from "../imgs/XboxControlStartPage.webp"
+import ps5Control from "../imgs/ControllPS5StartPage.webp"
+import notebook from "../imgs/NotebookStartPage.webp"
+import iphoneApple from "../imgs/IphoneStartPage.webp"
 
 const Start = () => {
     return (
@@ -19,11 +24,11 @@ const Start = () => {
                     <div><h3>Encontre os melhores produtos aqui!</h3></div>
                 </section>
                 <section>
-                   <img src="../imgs/FoneGamerStartPage.webp" alt="" />
-                   <img src="../imgs/IphoneStartPage.webp" alt="" />
-                   <img src="../imgs/NotebookStartPage.webp" alt="" />
-                   <img src="../imgs/ControllPS5StartPage.webp" alt="" />
-                   <img src="../imgs/XboxControlStartPage.webp" alt="" />
+                   <img src={foneGamer} alt="" />
+                   <img src={iphoneApple} alt="" />
+                   <img src={notebook} alt="" />
+                   <img src={ps5Control} alt="" />
+                   <img src={xboxControl} alt="" />
                 </section>
             </main>
             <DefaultFooter/>
