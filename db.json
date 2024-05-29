@@ -1,30 +1,12 @@
 {
   "store": [
     {
-      "id": "c205",
-      "FirstName": "Teste",
-      "SecondName": "Teste",
-      "Age": 0,
-      "email": "novoemail@gmail.com",
-      "password": "123456",
-      "Cart": []
-    },
-    {
-      "id": "c404",
-      "FirstName": "Augusto ",
-      "SecondName": "Mariano",
-      "Age": 18,
-      "email": "augustoinacio243@gmail.com",
-      "password": "123456",
-      "Cart": []
-    },
-    {
-      "id": "d5c7",
-      "FirstName": "Fodasse",
-      "SecondName": "kkkkk",
-      "Age": 22,
-      "email": "teste2@email.com",
-      "password": "123456",
+      "id": "d312",
+      "FirstName": "admin",
+      "SecondName": "admin",
+      "Age": 150,
+      "email": "admin@admin.com",
+      "password": "adminadmin",
       "Cart": []
     }
   ]

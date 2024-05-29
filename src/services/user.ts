@@ -5,12 +5,14 @@ export interface User{
     Age:number,
     email:string,
     password:any,
-    Cart?:Products[]
+    Cart:Products[]
 }
 
 export type Products = {
+    id:number,
     name:string,
-    price:number
+    price:number,
+    url:string
 }
 
 export async function getDataById(id:string|undefined){
@@ -21,6 +23,27 @@ export async function getDataById(id:string|undefined){
 
 export async function getAllDatas() {
     const response = await fetch(import.meta.env.VITE_PUBLIC_APIURL)
-    const data:User = await response.json()
+    const data:User[] = await response.json()
     return data
 }
+
+export async function CheckDuplicates(email:string) {
+    const response = await getAllDatas()
+    const find = response.find((user) => user.email === email)
+    if(find){
+        return false
+    } else{
+        return true
+    }
+}
+
+export function CheckPassword(password:any){
+    const regexPassword = /^([a-zA-Z0-9]{6,})$/gm
+    const myReturn = regexPassword.test(password)
+    if(!myReturn){
+        throw new Error(`At least six characters`)
+    } else{
+        return true
+    }
+}
+
