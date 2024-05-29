@@ -19,11 +19,11 @@ const Start = () => {
                     <div><h3>Encontre os melhores produtos aqui!</h3></div>
                 </section>
                 <section>
-                   <img src="../../public/imgs/FoneGamerStartPage.webp" alt="" />
-                   <img src="../../public/imgs/IphoneStartPage.webp" alt="" />
-                   <img src="../../public/imgs/NotebookStartPage.webp" alt="" />
-                   <img src="../../public/imgs/ControllPS5StartPage.webp" alt="" />
-                   <img src="../../public/imgs/XboxControlStartPage.webp" alt="" />
+                   <img src="../imgs/FoneGamerStartPage.webp" alt="" />
+                   <img src="../imgs/IphoneStartPage.webp" alt="" />
+                   <img src="../imgs/NotebookStartPage.webp" alt="" />
+                   <img src="../imgs/ControllPS5StartPage.webp" alt="" />
+                   <img src="../imgs/XboxControlStartPage.webp" alt="" />
                 </section>
             </main>
             <DefaultFooter/>
