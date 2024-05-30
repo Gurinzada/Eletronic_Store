@@ -1,0 +1,61 @@
+.WrapperCart{
+    background-color: #313131;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4.5fr;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.HeaderCart{
+    align-items: center;
+    background-color: rgb(7, 184, 3);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.SectionTable{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.TitleH3Cart{
+    font-size: 1.5rem;
+}
+
+table, th, td{
+    border: 2px solid  rgb(7, 184, 3);
+    border-collapse: collapse;
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table{
+    width: 100%;
+}
+
+.BntRemove{
+    border: 1px solid #313131;
+    border-radius: 2px;
+    background-color: #f43434;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.Bnt{
+    border-radius: 12px;
+    border: 1px solid #d4d4d4;
+    cursor: pointer;
+    box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
+    background-color: #313131;
+    color: #f43443;
+    font-size: 0.8rem;
+    height: 1.8rem;
+    width: 12rem;
+}
+  

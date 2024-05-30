@@ -5,6 +5,7 @@ export interface User{
     Age:number,
     email:string,
     password:any,
+    Address:Address[]
     Cart:Products[]
 }
 
@@ -13,6 +14,13 @@ export type Products = {
     name:string,
     price:number,
     url:string
+}
+
+export type Address = {
+    Street: string
+    Neighborhood:string
+    HouseNumber:number
+    cep:string,
 }
 
 export async function getDataById(id:string|undefined){

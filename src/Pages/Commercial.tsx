@@ -5,6 +5,8 @@ import { useAuth } from "../context/AuthProvider";
 import myProducts from "../../dataimage.json";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import 'react-toastify/ReactToastify.css';
+import style from "../Styles/Commercial.module.scss"
+import DefaultFooter from "../components/DefaultFooter";
 
 export default function Commercial() {
   const { UserID } = useParams();
@@ -59,25 +61,26 @@ export default function Commercial() {
   };
 
   return (
-    <div>
-      <header>
+    <div className={style.WrapperCommercial}>
+      <header className={style.HeaderCommercial}>
         <div>
           <h1>
             Seja bem vindo {infosUser?.FirstName}
           </h1>
         </div>
-        <nav>
-          <Link to={`/commercial/cart/${UserID}`}><button>Carrinho</button></Link>
-          <button onClick={handleLogout}>Logout</button>
+        <nav className={style.NavBar}>
+          <Link to={`/commercial/cart/${UserID}`}><button className={style.bntCard}>Carrinho</button></Link>
+          <Link to={`/commercial/profile/${UserID}`}><button className={style.bntCard}>Perfil</button></Link>
+          <button onClick={handleLogout} className={style.bntCard}>Logout</button>
         </nav>
       </header>
 
-      <main>
+      <main className={style.WrapperProductCards}>
         <section>
-          <div>
+          <div className={style.WrapperProducts}>
             {myProducts.length > 0 ? (
               myProducts.map((product, index) => (
-                <div key={product.id}>
+                <div key={product.id} className={style.CardProduct}>
                   <div>
                     <img src={product.url} alt={product.name} />
                   </div>
@@ -88,7 +91,7 @@ export default function Commercial() {
                     <h4>R${product.price}</h4>
                   </div>
                   <div>
-                    <button onClick={() => handleNotify(index)}>Comprar agora!</button>
+                    <button onClick={() => handleNotify(index)} className={style.bntCard}>Comprar agora!</button>
                   </div>
                 </div>
               ))
@@ -99,6 +102,7 @@ export default function Commercial() {
         </section>
         <ToastContainer />
       </main>
+      <DefaultFooter/>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import { User, getDataById } from "../services/user"
 import { Bounce, ToastContainer, toast } from "react-toastify"
 import 'react-toastify/ReactToastify.css';
+import style from "../Styles/Cart.module.scss"
 
 export default function Cart(){
     const {UserID} = useParams()
@@ -55,20 +56,20 @@ export default function Cart(){
     }
 
     return(
-        <div>
-            <header>
+        <div className={style.WrapperCart}>
+            <header className={style.HeaderCart}>
                 <div>
                     <h1>Bem vindo ao seu carrinho {infosUser?.FirstName}</h1>
                     <p>Pronto para finalizar sua compra?</p>
                 </div>
                 <nav>
-                    <Link to={`/commercial/${UserID}`}><button>Voltar</button></Link>
+                    <Link to={`/commercial/${UserID}`}><button className={style.Bnt}>Voltar</button></Link>
                 </nav>
             </header>
             <main>
-                <section>
-                    <h3>Aqui estão suas compras!</h3>
-                    <table>
+                <section className={style.SectionTable}>
+                    <h3 className={style.TitleH3Cart}>Aqui estão suas compras!</h3>
+                    <table >
                         <thead>
                             <tr>
                                 <th scope="col"><h1>Produto</h1></th>
@@ -77,10 +78,10 @@ export default function Cart(){
                             </thead>
                             <tbody>
                     {infosUser?.Cart.length || undefined ?  infosUser?.Cart.map((user, index) =>(
-                       <tr key={index}>
+                       <tr key={index} >
                         <th scope="row">{user.name}</th>
                         <th>R$ {user.price}</th>
-                        <th><button onClick={() => removeProduct(index)}>Remover</button></th>
+                        <th  style={{textAlign:"center"}}><button onClick={() => removeProduct(index)} className={style.BntRemove}>-</button></th>
                        </tr>
                     )): <></> }
                         </tbody>

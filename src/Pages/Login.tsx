@@ -4,6 +4,8 @@ import { User, getAllDatas } from "../services/user"
 import { useAuth } from "../context/AuthProvider"
 import iconMaster from "../imgs/IconMaster.webp"
 import styles from "../Styles/Login.module.scss"
+import typeStyles from "../Styles/Start.module.scss"
+import { TypeAnimation } from "react-type-animation"
 
 export default function Login(){
     const [infosUsers, setInfosUsers] = useState<User[]>([])
@@ -36,28 +38,41 @@ export default function Login(){
 
     return(
         <main className={styles.WrapperLogin}>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin} className={styles.Form}>
                 <div>
                     <h1>Bem vindo a PixelPioneer</h1>
                 </div>
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" required value={userName} onChange={(e) => setUserName(e.target.value)}/>
+                <div className={styles.Content}>
+                    <label htmlFor="email" className={styles.label}>Email</label>
+                    <input type="email" id="email" required value={userName} onChange={(e) => setUserName(e.target.value)} className={styles.Input}/>
+                </div>
+                <div className={styles.Content}>
+                    <label htmlFor="password" className={styles.label}>Senha</label>
+                    <input type="password" id="password" value={userPassword} onChange={(e) => setUserPassword(e.target.value)} className={styles.Input}/>
                 </div>
                 <div>
-                    <label htmlFor="password">Senha</label>
-                    <input type="password" id="password" value={userPassword} onChange={(e) => setUserPassword(e.target.value)}/>
+                    <button className={styles.Bnt}>Entrar</button>
                 </div>
-                <div>
-                    <button>Entrar</button>
-                </div>
-                <div>
+                <div className={styles.ContentAdvice}>
                     <h4>Ainda não possui uma conta?</h4>
-                    <Link to={"/register"}><button>Cadastra-se</button></Link>
+                    <Link to={"/register"}><button className={styles.Bnt}>Cadastre-se</button></Link>
                 </div>
             </form>
-            <section className={""}>
-                <img src={iconMaster} alt="" />
+            <section className={styles.ContentLogo}>
+                <div>
+                <TypeAnimation sequence={[
+                        "Bem vindo a Pixel!",
+                        1000,
+                        "Faça seu login agora e aproveite 😊!",
+                        1000
+                    ]}
+                    wrapper="h2"
+                    speed={50}
+                    repeat={Infinity}
+                    className={typeStyles.TypeAnimation}
+                    />
+                </div>
+                <img src={iconMaster} alt="" className={styles.ImgLogo}/>
             </section>
         </main>
     )

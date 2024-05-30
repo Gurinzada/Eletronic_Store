@@ -1,0 +1,62 @@
+.WrapperCommercial{
+    align-items: center;
+    background-image: url("../imgs/Controlers.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.HeaderCommercial{
+    align-items: center;
+    background-color: rgb(7, 184, 3);
+    border-bottom: 2px solid #313131;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100%;
+}
+
+.NavBar{
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.WrapperProducts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.CardProduct{
+    align-items: center;
+    border: 2px solid #f2ff00;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 18.75rem;
+    justify-content: center;
+}
+
+.WrapperProductCards{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bntCard{
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background-color: #313131;
+    color: #f43443;
+    cursor: pointer;
+    height: 1.8rem;
+    width: 9rem;
+}

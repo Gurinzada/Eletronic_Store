@@ -1,5 +1,77 @@
 .WrapperLogin{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
     grid-template-rows: 1fr;
+}
+
+.ContentLogo{
+    align-items: center;
+    background-color: #313131;
+    border-left: 6px solid #e1ff00;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.ImgLogo{
+    border-radius: 50%;
+}
+
+.Form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3.5rem 0rem 0rem 0rem;
+    justify-content: flex-start;
+}
+
+.Content, .ContentDiv{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContentDif{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.Input{
+    border-radius: 18px;
+    border: 2px solid #d4d4d4;
+    box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
+    height: 3rem;
+    padding-left: 0.8rem;
+    width: 26rem;
+}
+
+.label{
+    padding-left: 0.5rem;
+}
+
+.ContentAdvice{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.Bnt{
+    border-radius: 12px;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.75);
+    background-color: #313131;
+    cursor: pointer;
+    color: #f43443;
+    font-size: 0.8rem;
+    height: 1.8rem;
+    width: 12rem;
 }
