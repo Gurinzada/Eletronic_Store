@@ -1,0 +1,73 @@
+.Wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8.5rem;
+    justify-content: center;
+}
+
+.HeaderWrapper{
+    align-items: center;
+    background-color: #313131;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100%;
+}
+
+.NavBar{
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.button{
+    border-radius: 8rem;
+    border: 1px solid #313131;
+    cursor: pointer;
+    height: 1.8rem;
+    width: 13rem;
+    transition: ease-in-out .5s;
+}
+
+.button:hover{
+    background-color: #45f135;
+}
+
+.MainWrapper{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.WrapperImgs{
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.Img{
+    border-radius: 12px;
+    width: 12.75rem;
+    transition: 1s;
+}
+
+.Img:hover{
+    transform: scale(1.1);
+}
+
+.Icon{
+    border-radius: 50%;
+    width: 6.25rem;
+}
+
+.TypeAnimation{
+    font-family: "Pixelify Sans", sans-serif;
+}

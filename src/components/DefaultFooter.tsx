@@ -1,8 +1,10 @@
+import styles from "../Styles/DefaultFooter.module.scss"
+
 const DefaultFooter = () => {
     return(
-        <footer>
+        <footer className={styles.Footer}>
             <div>
-                <span>PixelPioneer, 2024</span>
+                <span>PixelPioneer, 2024©</span>
             </div>
             <div>
                 <span>Obrigado por usar nossos serviços!</span>

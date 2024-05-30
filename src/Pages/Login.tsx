@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { User, getAllDatas } from "../services/user"
 import { useAuth } from "../context/AuthProvider"
+import iconMaster from "../imgs/IconMaster.webp"
+import styles from "../Styles/Login.module.scss"
 
 export default function Login(){
     const [infosUsers, setInfosUsers] = useState<User[]>([])
@@ -33,7 +35,7 @@ export default function Login(){
     }
 
     return(
-        <main>
+        <main className={styles.WrapperLogin}>
             <form onSubmit={handleLogin}>
                 <div>
                     <h1>Bem vindo a PixelPioneer</h1>
@@ -54,6 +56,9 @@ export default function Login(){
                     <Link to={"/register"}><button>Cadastra-se</button></Link>
                 </div>
             </form>
+            <section className={""}>
+                <img src={iconMaster} alt="" />
+            </section>
         </main>
     )
 }
