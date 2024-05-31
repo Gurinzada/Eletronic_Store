@@ -13,6 +13,7 @@ export default function Commercial() {
   const { UserID } = useParams();
   const [infosUser, setInfosUser] = useState<User | null>(null);
   const [changeState, setChangeState] = useState(false);
+  const [flipCard, setFlipCard] = useState(true)
   const { logout } = useAuth();
 
   const datas = async () => {
@@ -68,15 +69,17 @@ export default function Commercial() {
           <h1>
             Seja bem vindo {infosUser?.FirstName}
           </h1>
-          <div className={style.BoxAddress}>
+          { flipCard === true ?<div className={style.BoxAddress} onMouseOver={() => setFlipCard(false)}>
           <img src={location} alt="" />
-            <>{infosUser?.Address && infosUser.Address.length > 0 ? infosUser?.Address.map((data) => (
+            <>{flipCard && infosUser?.Address && infosUser.Address.length > 0 ? infosUser?.Address.map((data) => (
              <>
               <span>{data.Street} - {data.HouseNumber}, {data.Neighborhood}</span>
               <span>{data.cep}</span>
              </>
             )): <span>Cadastre seu endereço agora</span>}</>
-          </div>
+          </div> : <div className={style.BoxAddress} onMouseLeave={() => setFlipCard(true)}>
+          <Link to={`/commercial/profile/${UserID}`}><button className={style.bntCardEdit}>Editar</button></Link>
+            </div>}
         </div>
         <nav className={style.NavBar}>
           <Link to={`/commercial/cart/${UserID}`}><button className={style.bntCard}>Carrinho</button></Link>

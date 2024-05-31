@@ -46,7 +46,7 @@ export async function CheckDuplicates(email:string) {
 }
 
 export function CheckPassword(password:any){
-    const regexPassword = /^([a-zA-Z0-9]{6,})$/gm
+    const regexPassword = /^([a-zA-Z0-9\s]{6,})$/gm
     const myReturn = regexPassword.test(password)
     if(!myReturn){
         throw new Error(`At least six characters`)

@@ -16,6 +16,36 @@
           "Neighborhood": "Centro"
         }
       ]
+    },
+    {
+      "id": "6285",
+      "FirstName": "Augusto ",
+      "SecondName": "Mariano",
+      "Age": 20,
+      "email": "augustoinacio243@gmail.com",
+      "password": "Ronron 123",
+      "Cart": [
+        {
+          "id": 7,
+          "name": "Mouse Gamer Redragon Cobra Chroma",
+          "price": 149.99,
+          "url": "https://images.kabum.com.br/produtos/fotos/94555/mouse-gamer-redragon-cobra-chroma-rgb-12400dpi-7-botoes-preto-m711-v2_1656018617_m.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Watch Dogs Legion-PS5",
+          "price": 249.99,
+          "url": "https://images.kabum.com.br/produtos/fotos/magalu/497276/Watch-Dogs-Legion-para-PS5-Ubisoft-Lan-amento_1696010415_m.jpg"
+        }
+      ],
+      "Address": [
+        {
+          "Street": "Rua Coronel Fran Antônio dos Santos ",
+          "cep": "37200-434",
+          "HouseNumber": 74,
+          "Neighborhood": "Ignácio Valentim"
+        }
+      ]
     }
   ]
 }

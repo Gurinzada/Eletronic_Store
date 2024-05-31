@@ -81,7 +81,7 @@ export default function Cart(){
                        <tr key={index} >
                         <th scope="row">{user.name}</th>
                         <th>R$ {user.price}</th>
-                        <th  style={{textAlign:"center"}}><button onClick={() => removeProduct(index)} className={style.BntRemove}>-</button></th>
+                        <th  style={{textAlign:"center"}}><button onClick={() => removeProduct(index)} className={style.BntRemove} style={{color:"white"}}>-</button></th>
                        </tr>
                     )): <></> }
                         </tbody>
