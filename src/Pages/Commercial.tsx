@@ -6,6 +6,7 @@ import myProducts from "../../dataimage.json";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import 'react-toastify/ReactToastify.css';
 import style from "../Styles/Commercial.module.scss"
+import location from "../imgs/location-sign-svgrepo-com.svg"
 import DefaultFooter from "../components/DefaultFooter";
 
 export default function Commercial() {
@@ -63,10 +64,19 @@ export default function Commercial() {
   return (
     <div className={style.WrapperCommercial}>
       <header className={style.HeaderCommercial}>
-        <div>
+        <div className={style.WelcomeArea}>
           <h1>
             Seja bem vindo {infosUser?.FirstName}
           </h1>
+          <div className={style.BoxAddress}>
+          <img src={location} alt="" />
+            <>{infosUser?.Address && infosUser.Address.length > 0 ? infosUser?.Address.map((data) => (
+             <>
+              <span>{data.Street} - {data.HouseNumber}, {data.Neighborhood}</span>
+              <span>{data.cep}</span>
+             </>
+            )): <span>Cadastre seu endereço agora</span>}</>
+          </div>
         </div>
         <nav className={style.NavBar}>
           <Link to={`/commercial/cart/${UserID}`}><button className={style.bntCard}>Carrinho</button></Link>

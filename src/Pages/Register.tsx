@@ -14,7 +14,7 @@ export default function Register(){
     const [email, setEmail] = useState(``)
     const [password, setPassword] = useState(``)
     const [cartArrayEmpty] = useState<Products[]>([])
-    const [Address] = useState<Address[]>([])
+    
     const navigate = useNavigate()
     const {login} = useAuth()
 
@@ -31,7 +31,7 @@ export default function Register(){
             email: email,
             password: password,
             Cart: cartArrayEmpty,
-            Address: Address
+            Address: []
         }
 
         const response = await fetch(import.meta.env.VITE_PUBLIC_APIURL,{

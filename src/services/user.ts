@@ -5,7 +5,7 @@ export interface User{
     Age:number,
     email:string,
     password:any,
-    Address:Address[]
+    Address:[Address] | []
     Cart:Products[]
 }
 
@@ -50,6 +50,16 @@ export function CheckPassword(password:any){
     const myReturn = regexPassword.test(password)
     if(!myReturn){
         throw new Error(`At least six characters`)
+    } else{
+        return true
+    }
+}
+
+export function CheckCep(cep:string){
+    const regexCep = /^([0-9]{5}-[0-9]{3})$/gm
+    const myCepIsValid = regexCep.test(cep)
+    if(!myCepIsValid){
+        return false
     } else{
         return true
     }

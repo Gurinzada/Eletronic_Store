@@ -8,7 +8,14 @@
       "email": "admin@admin.com",
       "password": "adminadmin",
       "Cart": [],
-      "Address":[]
+      "Address": [
+        {
+          "Street": "Rua José Ferreira Leite",
+          "cep": "35598-022",
+          "HouseNumber": 74,
+          "Neighborhood": "Centro"
+        }
+      ]
     }
   ]
 }
